@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no Java Script</h1>
+    <script>
+
+        let numeros =[16, 82, 30, 48, 50, 66, 17, 8, 33, 12, 60, 78, 44, 24, 55, 50, 21, 29, 19, 42]
+
+        function mediaNumeros(numeros) {
+            let soma = 0;
+            for (let i = 0; i < numeros.length; i++) {
+                soma += numeros[i];
+            }
+            return soma / 20;
+        }
+
+        let mediaIdades = mediaNumeros(numeros);
+
+        function maiorIdade(numeros, media) {
+            let acimaDaMedia = [];
+            for (let i = 0; i < numeros.length; i++) {
+                if (numeros[i] > media) {
+                    acimaDaMedia.push(numeros[i]);
+                }
+            }
+            return acimaDaMedia;
+        }
+
+        let idadeAcimaMedia = maiorIdade(numeros, mediaIdades);
+
+        alert("Numeros: " + numeros);
+        alert("Media das Idades: " + mediaIdades);
+        alert("Idades acima da média: " + idadeAcimaMedia);
+
+
+
+    </script>
+</body>
+</html>
+
+    
